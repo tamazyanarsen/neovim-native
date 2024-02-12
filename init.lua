@@ -29,3 +29,9 @@ require('plugins.telescope')
 require('plugins.tree')
 require('plugins.catppuccin')
 
+vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
+  group = vim.api.nvim_create_augroup("code_action_sign", { clear = true }),
+  callback = function()
+    require('code-actions').code_action_listener()
+  end,
+})
