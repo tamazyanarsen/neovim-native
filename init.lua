@@ -22,12 +22,14 @@ require("lazy").setup({
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  'dense-analysis/ale',
 }, {})
 
 require('plugins.nvim')
 require('plugins.telescope')
 require('plugins.tree')
 require('plugins.catppuccin')
+require('plugins.ale')
 
 vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
   group = vim.api.nvim_create_augroup("code_action_sign", { clear = true }),

@@ -1,0 +1,5 @@
+vim.cmd('let g:ale_use_neovim_diagnostics_api = 1')
+vim.cmd('let g:ale_disable_lsp = "auto"')
+vim.cmd('let b:ale_linters = {"javascript": ["eslint"], "typescript": ["eslint"]}')
+vim.cmd('let b:ale_fixers = {"javascript": ["prettier", "eslint"], "typescript": ["prettier", "eslint"]}')
+vim.cmd('let g:ale_fix_on_save = 1')
