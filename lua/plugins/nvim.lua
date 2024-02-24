@@ -12,6 +12,7 @@ vim.cmd('set autowrite')
 vim.cmd('set autowriteall')
 vim.cmd('set tabstop=4')
 vim.cmd('set shiftwidth=4')
+-- vim.cmd('set completopt+=preview')
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -123,5 +124,6 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
+	{ name = 'nvim_lsp_signature_help' },
   },
 }
