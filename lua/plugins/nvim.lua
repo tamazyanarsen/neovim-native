@@ -82,6 +82,8 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+require'lspconfig'.angularls.setup{}
+
 -- luasnip setup
 local luasnip = require 'luasnip'
 

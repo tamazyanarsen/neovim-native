@@ -12,6 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	"williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
 	'neovim/nvim-lspconfig', -- Collection of configurations for built-in LSP client
 	{'hrsh7th/nvim-cmp', event = { "InsertEnter", "CmdlineEnter" },}, -- Autocompletion plugin
   'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
@@ -36,7 +38,7 @@ require('plugins.telescope')
 require('plugins.tree')
 require('plugins.catppuccin')
 require('plugins.ale')
--- require('plugins.luasnip')
+require('plugins.mason')
 -- require "lsp_signature".setup({})
 
 vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
