@@ -33,12 +33,12 @@ require("lazy").setup({
   },
 }, {})
 
+require('plugins.mason')
 require('plugins.nvim')
 require('plugins.telescope')
 require('plugins.tree')
 require('plugins.catppuccin')
 require('plugins.ale')
-require('plugins.mason')
 -- require "lsp_signature".setup({})
 
 vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
