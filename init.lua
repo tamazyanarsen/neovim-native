@@ -31,6 +31,11 @@ require("lazy").setup({
 	  opts = {},
 	  config = function(_, opts) require'lsp_signature'.setup(opts) end
   },
+	{
+  "pmizio/typescript-tools.nvim",
+	  dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	  opts = {},
+	},
 }, {})
 
 require('plugins.mason')
@@ -39,6 +44,7 @@ require('plugins.telescope')
 require('plugins.tree')
 require('plugins.catppuccin')
 require('plugins.ale')
+require('plugins.typescript')
 -- require "lsp_signature".setup({})
 
 vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
